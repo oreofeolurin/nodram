@@ -16,7 +16,7 @@
   "author": "Ore-Ofe Olurin",
   "license": "Apache-2.0",
   "bin": {
-    "ream": "./index.js"
+    "nodram": "./index.js"
   },
   "repository" : "https://github.com/oreofeolurin/ream.git",
   "dependencies": {
