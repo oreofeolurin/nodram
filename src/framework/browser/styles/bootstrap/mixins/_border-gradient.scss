@@ -1,0 +1,5 @@
+
+@mixin border-gradient($width,$colorStart) {
+    border-right: $width solid;
+    border-image: linear-gradient(to top, $colorStart, $colorStart) 1 100%;
+}

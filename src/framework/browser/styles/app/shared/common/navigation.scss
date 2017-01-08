@@ -1,0 +1,85 @@
+@import "../../../bootstrap/variables";
+
+#NavigationView{
+    display: flex;
+    flex-direction: column;
+    background: $brand-black;
+    height: 100%;
+    color: #fff;
+
+    header .app-logo{
+        padding: 20px;
+        text-align: center;
+        img{
+            width: 120px;
+        }
+
+    }
+
+
+    section nav{
+        width: 100%;
+        padding: 10px;
+        font-family: $gt-haptik;
+        font-size: $font-size-sm;
+        text-transform: uppercase;
+        cursor: pointer;
+        i{
+            margin-top: -5px;
+            margin-right: 5px;
+        }
+        &:hover{
+            background: darken($brand-black,5%);
+        }
+
+        &.active{
+            background: $brand-primary;
+        }
+    }
+
+
+    //.nav-item{
+    //    height: auto;
+    //    padding: 20px;
+    //    width: 100%;
+    //    display: flex;
+    //    flex-direction: column;
+    //    justify-content: center;
+    //    cursor: pointer;
+    //    color:#fff;
+    //    font-family: $gt-haptik;
+    //
+    //    *{
+    //        margin: 0 auto;
+    //    }
+    //
+    //    &.active, &:hover{
+    //        background: transparentize($brand-black, 0.28); // rgba(49,57,58,0.72);
+    //    }
+    //
+    //    &.active{
+    //        border-right: 3px solid $brand-secondary;
+    //    }
+    //
+    //
+    //    &[data-name="Profile"]{
+    //        height: 100px;
+    //        background : url("res/images/background/header-profile-pattern.png");
+    //
+    //
+    //        .avatar img {
+    //            width: 50px;
+    //            height: 50px;
+    //            border-radius: 100%;
+    //
+    //        }
+    //
+    //        .name {
+    //            font-size: $font-size-sm;
+    //        }
+    //
+    //    }
+    //
+    //}
+
+}

@@ -1,0 +1,70 @@
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { UniversalModule, isBrowser, isNode } from 'angular2-universal/node'; // for AoT we need to manually split universal packages
+
+import { AppModule} from '../browser/app/app.module';
+import {AppComponent } from '../browser/app/app.component';
+import {SharedModule} from "../browser/app/core/shared.module";
+import {CacheService} from "../browser/app/core/cache.service";
+
+
+// Will be merged into @angular/platform-browser in a later release
+// see https://github.com/angular/angular/pull/12322
+import { Meta } from './helpers/angular2-meta';
+
+export function getLRU() {
+    return new Map();
+}
+export function getRequest() {
+    return {};
+}
+export function getResponse() {
+    return {};
+}
+
+// TODO(gdi2290): refactor into Universal
+export const UNIVERSAL_KEY = 'UNIVERSAL_CACHE';
+
+@NgModule({
+    bootstrap: [ AppComponent ],
+    imports: [
+        UniversalModule, // BrowserModule, HttpModule, and JsonpModule are included
+        FormsModule,
+        RouterModule.forRoot([], { useHash: false }),
+        SharedModule.forRoot(),
+        AppModule,
+    ],
+    providers: [
+        { provide: 'isBrowser', useValue: isBrowser },
+        { provide: 'isNode', useValue: isNode },
+
+        { provide: 'req', useFactory: getRequest },
+        { provide: 'res', useFactory: getResponse },
+
+        { provide: 'LRU', useFactory: getLRU, deps: [] },
+
+       CacheService,
+
+        Meta,
+    ]
+})
+export class MainModule {
+    constructor(public cache: CacheService) {}
+
+    /**
+     * We need to use the arrow function here to bind the context as this is a gotcha
+     * in Universal for now until it's fixed
+     */
+    universalDoDehydrate = (universalCache) => {
+        universalCache[CacheService.KEY] = JSON.stringify(this.cache.dehydrate());
+    };
+    /**
+     * Clear the cache after it's rendered
+     */
+    universalAfterDehydrate = () => {
+        // comment out if LRU provided at platform level to be shared between each user
+        this.cache.clear();
+    }
+}
+

@@ -1,0 +1,93 @@
+@import "variables";
+
+body{
+ // background: linear-gradient(-134deg, $brand-primary 0%, $brand-yellow 98%) $brand-black;
+
+  background: #ffffff;
+  background: $brand-black;
+  overflow-x:  hidden;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+
+
+strong.secondary{
+  color: $brand-secondary;
+}
+
+
+strong.green{
+  color: $brand-primary;
+}
+strong.white{
+  color:#fff !important;
+}
+.all-caps{
+  text-transform: uppercase;
+}
+
+
+.centerText{
+  text-align: center;
+}
+
+
+.flex-row{
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column{
+  display: flex;
+  flex-direction: column;
+}
+
+
+svg.svg-grind, .svg-grind > svg{
+  width: 16px;
+  height: 16px;
+  display: none;
+  margin-left: 5px;
+  padding-top: 1px;
+}
+
+
+i.glyphicon-trash{
+  font-size : 12px;
+  color : $brand-danger;
+}
+
+
+.md-menu{
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+
+  [md-menu-item].menu-item {
+    text-transform: capitalize;
+    font-size: $font-size-sm;
+    font-family: $gt-haptik;
+    height: 40px;
+  }
+
+}
+
+
+.picker{
+  position: relative !important;
+  z-index: 800 !important;
+}
+
+.picker--opened{
+  z-index: 1000 !important;
+}
+
+.picker__holder{
+  max-height: 250px !important;
+  overflow: hidden !important;
+  max-width: 270px !important;
+}
+
+md-icon{
+  vertical-align: bottom;
+}

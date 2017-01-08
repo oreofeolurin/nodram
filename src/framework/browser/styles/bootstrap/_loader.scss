@@ -1,0 +1,171 @@
+@import "variables";
+
+
+#app-loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: $brand-black;
+
+  .overlay{
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background: transparentize($brand-black, 0.28); // rgba(49,57,58,0.72);
+  }
+
+  .loading-text{
+    position: relative;
+    color: white;
+    font-family: $lato;
+    margin-right: 10px;
+    display: inline-block;
+    font-size: 15px;
+    padding-left: 10px;
+  }
+
+  .loading-spinner{
+    position: relative;
+    vertical-align: middle;
+    width: 50px;
+    height: 10px;
+    display: inline-block;
+
+    i{
+      position: absolute;
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background:$brand-yellow;
+      animation:pulse 1s infinite ease-in-out;
+      animation-fill-mode:both;
+      display: inline-block;
+
+      &.one{
+        left:0;
+        animation-delay:-.32s;
+      }
+
+      &.two{
+        left:50%;
+        transform:translateX(-50%);
+        animation-delay:-.16s
+      }
+      &.three{
+        right:0
+      }
+
+    }
+  }
+
+
+  &:after {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+  }
+
+
+}
+
+@-webkit-keyframes pulse{0%,100%,80%{opacity:0}40%{opacity:1}}
+@-moz-keyframes pulse{0%,100%,80%{opacity:0}40%{opacity:1}}
+@keyframes pulse{0%,100%,80%{opacity:0}40%{opacity:1}}
+
+
+
+
+svg{
+
+  .qp-circular-loader {
+    width:16px;  /* 2*RADIUS + STROKEWIDTH */
+    height:16px; /* 2*RADIUS + STROKEWIDTH */
+  }
+  .qp-circular-loader-path {
+    stroke-dasharray: 32.4;  /* 2*RADIUS*PI * ARCSIZE/360 */
+    stroke-dashoffset: 32.4; /* 2*RADIUS*PI * ARCSIZE/360 */
+    /* hides things initially */
+  }
+
+  /* SVG elements seem to have a different default origin */
+  .qp-circular-loader, .qp-circular-loader * {
+    transform-origin: 50% 50%;
+  }
+
+  /* Rotating the whole thing */
+  @keyframes rotate {
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);}
+  }
+  .qp-circular-loader {
+    animation-name: rotate;
+    animation-duration: 1568.63ms; /* 360 * ARCTIME / (ARCSTARTROT + (360-ARCSIZE)) */
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  /* Filling and unfilling the arc */
+  @keyframes fillunfill {
+    from {
+      stroke-dashoffset: 32.3 /* 2*RADIUS*PI * ARCSIZE/360 - 0.1 */
+      /* 0.1 a bit of a magic constant here */
+    }
+    50% {
+      stroke-dashoffset: 0;
+    }
+    to {
+      stroke-dashoffset: -31.9 /* -(2*RADIUS*PI * ARCSIZE/360 - 0.5) */
+      /* 0.5 a bit of a magic constant here */
+    }
+  }
+  @keyframes rot {
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(-360deg);
+    }
+  }
+
+  @keyframes white-colors {
+    from {
+      stroke: #fff;
+    }
+    to {
+      stroke: #fff;
+    }
+  }
+
+
+  @keyframes primary-colors {
+    from {
+      stroke: $brand-primary;
+    }
+    to {
+      stroke: $brand-primary;
+    }
+  }
+
+
+  .qp-circular-loader-path {
+    animation-duration: 1333ms, 5332ms, 5332ms; /* ARCTIME, 4*ARCTIME, 4*ARCTIME */
+    animation-iteration-count: infinite, infinite, infinite;
+    animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1), steps(4), linear;
+    animation-play-state: running, running, running;
+    animation-fill-mode: forwards;
+  }
+
+
+  .qp-circular-loader-path-white{
+    animation-name: fillunfill, rot, white-colors;
+    @extend .qp-circular-loader-path;
+  }
+
+  .qp-circular-loader-path-primary{
+    animation-name: fillunfill, rot, primary-colors;
+    @extend .qp-circular-loader-path;
+  }
+}

@@ -1,0 +1,58 @@
+<article id="NavigationView">
+    <header>
+        <div class="app-logo">
+            <img src="{{STATIC_DOMAIN}}/res/images/logo/logo-line-white.png"/>
+        </div>
+    </header>
+
+    <section *ngFor="let navGroup of appNavigation.toJson()">
+       <nav  *ngIf ="navGroup.level <= admin.level" routerLink="{{navGroup.slug}}" routerLinkActive="active">
+           <i class="icon-common icon-{{navGroup.slug}}"></i> {{navGroup.name}}
+       </nav>
+    </section>
+
+
+
+<!--<section id="manage-bock">-->
+    <!--<nav class="nav-item" [ngClass]="{ active : 'Home' === activeRoute}">-->
+        <!--Manage Admins-->
+    <!--</nav>-->
+
+    <!--<nav class="nav-item" [ngClass]="{ active : 'Home' === activeRoute}">-->
+        <!--Passengers-->
+    <!--</nav>-->
+
+    <!--<nav class="nav-item" [ngClass]="{ active : 'Home' === activeRoute}">-->
+        <!--Manage Drivers-->
+    <!--</nav>-->
+
+    <!--<nav class="nav-item" [ngClass]="{ active : 'Home' === activeRoute}">-->
+        <!--Manage Owners-->
+    <!--</nav>-->
+
+
+<!--</section>-->
+
+
+
+
+
+    <!--<nav class="nav-item" data-name="Home" [ngClass]="{ active : 'Home' === activeRoute}">-->
+        <!--Home-->
+    <!--</nav>-->
+
+
+    <!--&lt;!&ndash;<nav class="nav-item" data-name="Transaction" [ngClass]="{ active : 'Transaction' === activeRoute}"  [routerLink]="['Transactions']">&ndash;&gt;-->
+    <!--&lt;!&ndash;Transactions&ndash;&gt;-->
+    <!--&lt;!&ndash;</nav>&ndash;&gt;-->
+
+    <!--<nav class="nav-item"  data-name="Transfer" [ngClass]="{active : 'Transfer' === activeRoute}" [routerLink]="['Transfers']">-->
+        <!--Transfers-->
+    <!--</nav>-->
+
+    <!--<nav class="nav-item"  data-name="Setting" [ngClass]="{active : 'Setting' === activeRoute}" [routerLink]="['Settings']">-->
+        <!--Setting-->
+    <!--</nav>-->
+
+
+</article>

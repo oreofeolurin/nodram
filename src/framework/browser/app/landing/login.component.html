@@ -1,0 +1,149 @@
+<article id="LoginView">
+
+
+    <section id="hero">
+
+        <aside>
+            <div class="app-logo">
+                <img src="{{STATIC_DOMAIN}}/res/images/logo/logo-line-white.png"/>
+            </div>
+
+        </aside>
+
+        <aside>
+
+            <div id="loginForm" class="step">
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit($event)">
+
+                <div class="error">{{error}}</div>
+
+                <div class="form-group">
+                    <input class="form-control" autocomplete="off" placeholder="johndoe@example.com" formControlName="email" required/>
+                    <div class="control" *ngIf="loginForm.controls.email.dirty">
+                        <i class="icon-common"  [ngClass]="{'icon-passed': loginForm.controls.email.valid, 'icon-failed' : loginForm.controls.email.errors}"></i>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input class="form-control" autocomplete="off" type="password" placeholder="Password" formControlName="password" required/>
+                    <div class="control" *ngIf="loginForm.controls.password.dirty">
+                        <i class="icon-common"  [ngClass]="{'icon-passed': loginForm.controls.password.valid, 'icon-failed' : loginForm.controls.password.errors}"></i>
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary submit" [disabled]="isGrinding">
+                        <span class="text">LOG IN</span>
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <svg class="svg-grind"></svg>
+                    </button>
+
+                </div>
+
+            </form>
+            </div>
+
+
+            <div id="emailNotSent" class="step">
+
+                <p class="title">Oops...</p>
+                <p class="details">Your login was not successful because you haven't confirmed your account. Please check your inbox to proceed, we must have sent you
+                    your confirmation email. You can try resending the email, if you didn't receive it.</p>
+
+                <p class="details centerText">
+                    <button class="btn btn-primary" [disabled]="isGrinding" (click) = "resendEmail()">
+                        <span class="text">Resend Email</span>
+                        <svg class="svg-grind"></svg>
+                    </button>
+
+                    <button class="btn btn-info" [disabled]="isGrinding" (click) = "openConfirm()">
+                        <span class="text">Confirm Account</span>
+                    </button>
+
+                </p>
+
+            </div>
+
+
+
+            <div id="emailResent" class="step">
+
+                <p class="title">Confirm Account.</p>
+                <p class="details">A  confirmation email has been resent along with an OTP. Please confirm your account with it.</p>
+                <div class="error centerText">{{otpError}}</div>
+                <p class="content center-block">
+                    <input class="form-control otp" type="input" [formControl]="otpControl" placeholder="123456"  />
+                    <span class="control" *ngIf="otpControl.dirty">
+                        <i class="icon-common"  [ngClass]="{'icon-passed': otpControl.valid, 'icon-failed' : otpControl.errors}"></i>
+                    </span>
+                </p>
+                <p class="details centerText">
+                    <button class="btn btn-info" (click) = "openEmailNotSent()">
+                        <span class="text">Back</span>
+                    </button>
+
+                    <button class="btn btn-primary" [disabled]="isGrinding || otpControl.errors || otpControl.pristine" (click) = "confirmAccount()">
+                        <span class="text">Confirm Account</span>
+                        <svg class="svg-grind"></svg>
+                    </button>
+                </p>
+
+            </div>
+
+
+            <div id="accountConfirmed" class="step">
+
+                <p class="title">Congrats...</p>
+                <p class="details">Your account has been successfully confirmed, please login to continue.</p>
+
+                <p class="details centerText">
+                    <button class="btn btn-primary" [disabled]="isGrinding" (click) = "startAgain()">
+                        <span class="text">LOGIN</span>
+                    </button>
+                </p>
+
+            </div>
+
+
+            <div id="issh" class="step">
+
+                <p class="title">Issh...</p>
+                <p class="details">Sorry, your login was not successfull. We are not really sure what went wrong. Please try again.</p>
+
+                <p class="details centerText">
+                    <button class="btn btn-primary" [disabled]="isGrinding" (click) = "startAgain()">
+                        <span class="text">LOGIN AGAIN</span>
+                    </button>
+                </p>
+
+            </div>
+
+
+        </aside>
+
+
+    </section>
+
+
+    <footer>
+        <div class="bottom-strip"></div>
+
+        <div class="row bottom-footer">
+            <div class="col-sm-6 copyright">
+                <span> © Copyright 2016 Rider. </span>
+            </div>
+
+            <div class="col-sm-6 made">
+                <span> Made with <span class="love-icon"></span> in Lagos </span>
+            </div>
+        </div>
+
+
+
+
+    </footer>
+
+
+</article>

@@ -1,0 +1,18 @@
+# IDE Files
+.idea
+
+# Configurations Files
+.env
+nodemon.json
+ream.config.json
+tsconfig.aot.json
+tsconfig.json
+webpack.config.ts
+webpack.prod.config.ts
+
+# Dependency directories
+node_modules
+
+# Development directories
+server
+browser

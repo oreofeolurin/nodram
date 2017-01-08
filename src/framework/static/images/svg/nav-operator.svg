@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="359px" height="359px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 87 87"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g id="content">
+  <g>
+    <path id="lineUnder" class="stroke" stroke="#FFF" stroke-linecap="round" fill="none" d="M14 72c21,-23 49,-13 59,0"/>
+    <circle id="circle" class="stroke" stroke="#FFF" stroke-width="4.80317" fill="none" cx="43" cy="33" r="17"/>
+    <path id="lineMic" class="stroke" stroke="#FFF" stroke-width="4.80317" stroke-linecap="round" fill="none" d="M52 19c8,6 12,17 -7,19"/>
+  </g>
+  <rect fill="none" width="87.3064" height="87.3064"/>
+ </g>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="300px" height="300px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 59 59"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+
+ <g id="content">
+  <polygon id="message" fill="none" stroke="#FFF"  points="19,42 19,49 26,43 44,43 44,18 10,18 10,42 "/>
+  <circle  id="dot"  fill="#FFF" cx="50" cy="13" r="4"/>
+  <rect fill="none" width="58.8504" height="58.8504"/>
+ </g>
+</svg>
+

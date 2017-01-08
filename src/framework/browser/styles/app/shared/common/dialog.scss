@@ -1,0 +1,30 @@
+@import "../../../bootstrap/variables";
+
+#DialogView{
+    width: 500px;
+    font-family: $lato;
+
+
+    section{
+        padding: 20px;
+        font-size: $font-size-h6;
+        font-weight: 300;
+    }
+
+    footer{
+        display: flex;
+        justify-content: center;
+        background: $gray-lightest;
+        border-top: $gray-light;
+        padding: 20px;
+        bottom: 0px;
+        border-bottom-left-radius: 5px ;
+        border-bottom-right-radius: 5px ;
+
+        button{
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+    }
+}

@@ -1,0 +1,113 @@
+@import "../../../bootstrap/variables";
+@import "../../../bootstrap/mixins/breakpoints";
+
+#TopbarView{
+    display: flex;
+    padding: 20px 0;
+    justify-content: space-between;
+
+    &.TOOLBAR_INNER_TYPE{
+        background: #fff;
+        border-bottom: 1px solid $gray-lighter;
+    }
+
+
+    #app-logo{
+        cursor: pointer;
+        padding-left:20px;
+        img{
+            height: 40px;
+        }
+    }
+
+    #app-menu-launcher{
+        visibility: hidden;
+    }
+
+
+    #app-menu{
+        padding:0px;
+        ul{
+            display: flex;
+
+            list-style: none;
+            padding: 0px;
+
+            li{
+                cursor: pointer;
+                color: #fff;
+                padding: 5px 0px;
+                margin: 0 20px;
+                border-bottom: 2px solid transparent;
+                &:hover{
+                    border-bottom: 2px solid $brand-primary;
+                }
+            }
+
+            md-icon{
+                font-size: $font-size-h5;
+                opacity: 0.7;
+            }
+        }
+    }
+
+
+
+    @include media-breakpoint-down(sm) {
+
+        background: #fff;
+        flex-wrap: wrap;
+
+        #app-logo{
+            img{
+                height: 30px;
+            }
+        }
+
+        #app-menu, #app-menu-launcher{
+            visibility: visible;
+        }
+        #app-menu-launcher{
+            cursor: pointer;
+            padding-right:20px;
+        }
+
+        #app-menu{
+            width: 100%;
+            height: 0px;
+            overflow: hidden;
+            ul{
+                flex-direction: column;
+                padding: 0px;
+
+                li{
+                    &:first-child{
+                        margin-top: 20px;
+                    }
+
+                    margin:0;
+                    color: $brand-black;
+                    padding: 10px 20px;
+                    border: none;
+                    &:hover{
+                        background: $gray-lightest;
+                        border: none;
+                    }
+                }
+            }
+
+            md-icon{
+                visibility: hidden;
+            }
+        }
+
+
+
+    }
+
+
+
+
+
+
+}

@@ -1,0 +1,73 @@
+<article id="TopbarView" [class]="toolbarType">
+
+ <div id="app-logo" routerLink="/">
+  <img src="{{STATIC_DOMAIN}}/res/images/logo/corpersnest-logo.png"/>
+ </div>
+
+
+
+ <div id="app-menu-launcher" (click)="launchMenu()">
+      <md-icon>menu</md-icon>
+ </div>
+
+
+
+ <div id="app-menu" class="closed">
+  <ul>
+   <li routerLink="/about">About Us</li>
+   <li routerLink="/services">Our Services</li>
+   <li routerLink="/contact-us">Contact Us</li>
+  </ul>
+ </div>
+
+
+
+
+
+
+
+
+
+ <!---->
+ <!--<nav id="app-logo">-->
+ <!--<img src="{{STATIC_DOMAIN}}/res/images/logo/corpersnest-logo.png"/>-->
+ <!--</nav>-->
+
+
+
+ <!--<nav id="service-lane">-->
+ <!--<div id="global-grind">-->
+ <!--<svg class="svg-grind"></svg>-->
+ <!--</div>-->
+
+ <!--</nav>-->
+
+
+ <!--<nav id="profile">-->
+ <!--<div class="name">{{admin.name?.full}}</div>-->
+ <!--<div id="profilePhoto" class="photo">-->
+ <!--<img *ngIf="admin.avatar" src="{{admin.avatar.thumb}}" />-->
+ <!--<img *ngIf="!admin.avatar" src="{{STATIC_DOMAIN}}/res/images/gifs/preloader.gif" />-->
+ <!--</div>-->
+
+ <!--</nav>-->
+
+
+ <!--<nav id="options">-->
+ <!--<div class="settings">-->
+ <!--<i class="icon-common icon-settings"></i>-->
+ <!--</div>-->
+
+ <!--<div class="logout" (click)="onLogout()">-->
+ <!--<i class="icon-common icon-logout"></i>-->
+ <!--</div>-->
+
+ <!--<div class="app-menu-launcher">-->
+ <!--<md-icon>menu</md-icon>-->
+ <!--</div>-->
+ <!---->
+
+ <!--</nav>-->
+
+
+</article>

@@ -1,0 +1,30 @@
+{
+  "indexHTML" : {
+    "title" : "Corpersnest",
+    "metas" : [
+      {"name": "viewport", "content": "width=device-width,minimum-scale=1"}
+    ],
+    "styles" : ["https://fonts.googleapis.com/icon?family=Material+Icons"]
+  },
+  "scripts" : {
+    "excludes" : ["helpers/__workaround.browser.ts","browser.bootstrap.aot.ts", "typings.d.ts","helpers/empty.js"],
+    "bundles": {
+      "anims": [
+        "node_modules/gsap/src/minified/TweenMax.min.js"
+      ]
+    },
+    "systemjs-bundles": {
+      "app-core" : [
+        "browser/app/*.js",
+        "!browser/app/system.config.js",
+        "browser/app/core/**/*.js",
+        "browser/app/helpers/**/*.js",
+        "!browser/app/helpers/empty.js",
+        "browser/app/shared/**/*.js",
+        "browser/app/services/**/*.js",
+        "browser/app/models/**/*.js",
+        "browser/app/animations/**/*.js"
+      ]
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="174px" height="139px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 21 17"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g id="content">
+
+ <g id="nLetter" class="letters">
+      <rect fill="#FFF" x="12" width="3.91767" height="16.79"/>
+      <rect fill="#FFF" transform="matrix(0.312204 -0 -0.939174 1.33802 11.7852 4.99199E-005)" width="12.5484" height="12.5484"/>
+ </g>
+
+  <circle id="dot" fill="#FFF" cx="19" cy="3" r="2"/>
+  <polygon id="iLetter" class="letters" fill="#FFF" fill-rule="nonzero" points="17,7 21,7 21,17 17,17 "/>
+ </g>
+</svg>

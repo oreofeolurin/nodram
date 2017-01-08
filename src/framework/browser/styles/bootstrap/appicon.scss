@@ -1,0 +1,131 @@
+@import "variables";
+//
+// Open Jobs Icon Pack
+//
+// Catchall baseclass
+
+[class^="icon-"]{
+  display:inline-block;
+  vertical-align:middle;
+  *margin-right:.3em;
+  width:14px;
+  height: 15px;
+  background-repeat: no-repeat;
+}
+
+[class^="icon-"]:last-child{
+  *margin-left:0;
+}
+/*
+============================================================================
+Icon Dashboard
+============================================================================
+*/
+
+.icon-common {
+  background-image: url("#{$STATIC_DOMAIN}/res/images/icons/icon-common.png");
+  width: 0;
+  height: 0;
+
+  &.icon-passed {
+    background-position:0px 0px;
+    height: 24px;
+    width: 24px;
+  }
+  &.icon-failed {
+    background-position: -24px 0px;
+    height: 24px;
+    width: 24px;
+  }
+
+  &.icon-logout{
+    background-position: -48px 0px;
+    height: 24px;
+    width: 24px;
+  }
+
+
+  &.icon-settings{
+    background-position: -72px 0px;
+    height: 24px;
+    width: 24px;
+  }
+
+  &.icon-app-settings{
+    background-position: -72px -48px;
+    height: 24px;
+    width: 24px;
+  }
+
+  &.icon-users{
+    background-position: -96px 0px;
+    height: 24px;
+    width: 24px;
+  }
+
+
+  &.icon-transactions{
+    background-position: -120px  0px;
+    height: 24px;
+    width: 24px;
+  }
+}
+
+/*
+============================================================================
+Icon Message
+============================================================================
+*/
+
+.icon-message{
+
+  vertical-align: baseline;
+
+  &.icon-unread {
+    height: 10px;
+    width: 10px;
+    border-radius:100%;
+    background: $brand-yellow;
+  }
+
+  &.icon-typing {
+    height: 10px;
+    width: 10px;
+    border-radius:100%;
+    border:2px solid $brand-primary;
+  }
+  &.icon-read {
+    height: 10px;
+    width: 10px;
+    border-radius:100%;
+    background: lighten($brand-black,20%);
+  }
+
+}
+
+
+
+
+
+//
+///*
+//============================================================================
+//Icon Navigation
+//============================================================================
+//*/
+//
+//.icon-dashboard {
+//  background-image: url(../images/icons/icon-navigation.png);
+//
+//  &.icon-chat {
+//    background-position:0px 0px;
+//    height: 25px;
+//    width: 28px;
+//  }
+//  &.icon-options {
+//    background-position: 0px 0px;
+//    height: 33px;
+//    width: 24px
+//  }
+//
+//}

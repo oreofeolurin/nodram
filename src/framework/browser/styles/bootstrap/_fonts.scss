@@ -1,0 +1,88 @@
+// Import the fonts
+
+
+@font-face {
+  font-family:$gt-haptik;
+  src: url('#{$gt-haptik-font-path}.eot');
+  src: url('#{$gt-haptik-font-path}.eot?#iefix') format('embedded-opentype'),
+  url('#{$gt-haptik-font-path}.woff') format('woff'),
+  url('#{$gt-haptik-font-path}.ttf') format('truetype'),
+  url('#{$gt-haptik-font-path}.svg#GTHaptikMedium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+@font-face {
+  font-family:$lato;
+  src: url('#{$lato-regular-font-path}.eot');
+  src: url('#{$lato-regular-font-path}.eot?#iefix') format('embedded-opentype'),
+  url('#{$lato-regular-font-path}.woff') format('woff'),
+  url('#{$lato-regular-font-path}.ttf') format('truetype'),
+  url('#{$lato-regular-font-path}.svg#latoregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family:$lato;
+  src: url('#{$lato-black-font-path}.eot');
+  src: url('#{$lato-black-font-path}.eot?#iefix') format('embedded-opentype'),
+  url('#{$lato-black-font-path}.woff') format('woff'),
+  url('#{$lato-black-font-path}.ttf') format('truetype'),
+  url('#{$lato-black-font-path}.svg#latoblack') format('svg');
+  font-style: normal;
+  font-weight: 900;
+
+}
+
+@font-face {
+  font-family:$lato;
+  src: url('#{$lato-bold-font-path}.eot');
+  src: url('#{$lato-bold-font-path}.eot?#iefix') format('embedded-opentype'),
+  url('#{$lato-bold-font-path}.woff') format('woff'),
+  url('#{$lato-bold-font-path}.ttf') format('truetype'),
+  url('#{$lato-bold-font-path}.svg#latobold') format('svg');
+  font-style: normal;
+  font-weight: bold;
+
+}
+
+
+@font-face {
+  font-family:$lato;
+  src: url('#{$lato-italic-font-path}.eot');
+  src: url('#{$lato-italic-font-path}.eot?#iefix') format('embedded-opentype'),
+  url('#{$lato-italic-font-path}.woff') format('woff'),
+  url('#{$lato-italic-font-path}.ttf') format('truetype'),
+  url('#{$lato-italic-font-path}.svg#latoitalic') format('svg');
+  font-style: italic;
+  font-weight: normal;
+
+}
+
+@font-face {
+  font-family:$lato;
+  src: url('#{$lato-bold-italic-font-path}.eot');
+  src: url('#{$lato-bold-italic-font-path}.eot?#iefix') format('embedded-opentype'),
+  url('#{$lato-bold-italic-font-path}.woff') format('woff'),
+  url('#{$lato-bold-italic-font-path}.ttf') format('truetype'),
+  url('#{$lato-bold-italic-font-path}.svg#latobolditalic') format('svg');
+  font-style: italic;
+  font-weight: bold;
+
+}
+
+@font-face {
+  font-family:$lato;
+  src: url('#{$lato-light-font-path}.eot');
+  src: url('#{$lato-light-font-path}.eot?#iefix') format('embedded-opentype'),
+  url('#{$lato-light-font-path}.woff') format('woff'),
+  url('#{$lato-light-font-path}.ttf') format('truetype'),
+  url('#{$lato-light-font-path}.svg#latolight') format('svg');
+  font-style: normal;
+  font-weight: 300;
+
+}

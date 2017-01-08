@@ -1,0 +1,267 @@
+@import "../../bootstrap/variables";
+@import "../../bootstrap/mixins/border-gradient";
+@import "../../bootstrap/mixins/breakpoints";
+
+#IndexView{
+    width:100%;
+    min-height: 100%;
+    height: auto;
+    font-family: $lato;
+    background-color: #373435;
+    background-image: url('#{$STATIC_DOMAIN}/res/images/background/nysc-lodge.png');
+    //// background-image: url('#{$STATIC_DOMAIN}/res/images/background/home_bg_2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    // background-attachment:fixed;
+
+    header{
+        display: flex;
+        padding: 20px 0;
+        justify-content: space-between;
+
+        #app-logo{
+            padding-left:20px;
+            img{
+                height: 40px;
+            }
+        }
+
+        #app-menu-launcher{
+            visibility: hidden;
+        }
+
+
+        #app-menu{
+            padding:0px;
+            ul{
+                display: flex;
+
+                list-style: none;
+                padding: 0px;
+
+                li{
+                    cursor: pointer;
+                    color: #fff;
+                    padding: 5px 0px;
+                    margin: 0 20px;
+                    border-bottom: 2px solid transparent;
+                    &:hover{
+                        border-bottom: 2px solid $brand-primary;
+                    }
+                }
+
+                md-icon{
+                    font-size: $font-size-h5;
+                    opacity: 0.7;
+                }
+            }
+        }
+
+    }
+
+
+
+
+
+    section#hero {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 50px 20px 20px 20px;
+        justify-content: center;
+        color: #fff;
+
+        h1, h5 {
+            font-weight: lighter;
+            text-align: center
+        }
+
+        h5 {
+            font-weight: lighter;
+            font-style: italic
+        }
+
+        md-icon{margin: 10px auto;}
+
+
+    }
+
+    section#call-to-action{
+            display: flex;
+            justify-content: center;
+
+            form{
+                width: 70%;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+
+                .form-group{
+                    display: flex;
+                    flex-direction: row;
+                    margin:10px;
+                    justify-content: center;
+
+                    &.full{
+                        width: 100%;
+                        z-index: 900;
+
+                    }
+                    &.flex-column{
+                        flex-direction: column
+                    }
+                    &.error{
+                        margin: 0 !important;
+                        padding: 0 !important;
+                    }
+                    input{
+                        width: 270px;
+                        color: #fff;
+                        padding: 10px;
+                        border: 2px solid #fff;
+                        border-radius: 5px;
+                        background: transparent;
+
+                        &:-webkit-autofill{
+                            -webkit-box-shadow: 0 0 0px 1000px $brand-black inset;
+                            -webkit-text-fill-color: white !important;
+                        }
+
+                    }
+
+                    .control{
+                        width: 30px;
+                        padding: 10px 0 0 10px
+                    }
+
+                    select{
+                        width:  270px;
+                        padding: 10px;
+                        background:  transparent;
+                        border-radius: 5px;
+                        border: 2px solid #fff;
+                        color: #fff;
+
+                        option{
+                            color: #000;
+                        }
+                    }
+
+                    button{
+                        font-family: $lato;
+                        font-weight: bold;
+                        font-size: 13px;
+                    }
+                }
+
+
+            }
+        }
+
+
+
+    footer{
+        bottom: 20px;
+        position: absolute;
+        width: 100%;
+
+        .bottom-footer{
+            font-size: $font-size-sm;
+            color: $gray-lighter;
+            padding: 20px 50px;
+            width: 100%;
+            display: flex;
+            align-content: space-between;
+            justify-content: space-between;
+
+
+            .love-icon{
+                margin:5px 5px 0 5px;
+                width: 25px;
+                height:25px;
+                background-image: url('#{$STATIC_DOMAIN}/res/images/icons/icon-love.png');
+                background-size: 25px;
+            }
+        }
+    }
+
+
+
+
+
+    @include media-breakpoint-down(sm) {
+
+        background-image: none;
+
+        header {
+            background: #fff;
+            flex-wrap: wrap;
+
+            #app-logo{
+                img{
+                    height: 30px;
+                }
+            }
+
+            #app-menu, #app-menu-launcher{
+                visibility: visible;
+            }
+            #app-menu-launcher{
+                cursor: pointer;
+                padding-right:20px;
+            }
+
+            #app-menu{
+                width: 100%;
+                height: 0px;
+                overflow: hidden;
+                ul{
+                    flex-direction: column;
+                    padding: 0px;
+
+                    li{
+                        &:first-child{
+                            margin-top: 20px;
+                        }
+
+                        margin:0;
+                        color: $brand-black;
+                        padding: 10px 20px;
+                        border: none;
+                        &:hover{
+                            background: $gray-lightest;
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        section#hero{
+            padding: 50px 20px;
+            background-image: url('#{$STATIC_DOMAIN}/res/images/background/nysc-lodge.png');
+            //// background-image: url('#{$STATIC_DOMAIN}/res/images/background/home_bg_2.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            // background-attachment:fixed;
+
+            h1{font-size: $font-size-h2; font-weight: bolder}
+            h5 {font-size: $font-size-sm; font-weight: lighter}
+
+        }
+
+        footer {
+            position: relative;
+            .bottom-footer{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+    }
+
+}

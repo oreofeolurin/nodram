@@ -1,0 +1,9 @@
+# IDE Files
+.idea
+
+# Configurations Files
+
+# Dependency directories
+node_modules
+
+# Development directories

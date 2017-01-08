@@ -1,0 +1,15 @@
+<article id="ModalView">
+        <article id="container">
+            <section id="main">
+                <header>
+                    <img *ngIf="modal?.backgroundImage" src="{{modal?.backgroundImage}}" />
+                    <h3>{{modal?.title}}</h3>
+                </header>
+                <section>{{modal?.content}}</section>
+                <footer>
+                    <button *ngFor="let action of modal?.actions" [ngClass] = "setButtonClass(action)" (click)="call(action)">{{action.name}}</button>
+                </footer>
+            </section>
+        </article>
+        
+    </article>

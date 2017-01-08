@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <title><%= title %></title>
+    <base href="/">
+    <meta charset="UTF-8">
+
+    <!--1. Set Meta-->
+    <% _.forEach(metas, function(meta) { %> <meta name="<%- meta.name %>" content="<%- meta.content %>"/><%}); %>
+
+
+    <!--2. Set Favicons-->
+    <% _.forEach(favicons, function(icon) { %><link rel="icon" href="<%- icon %>"/><%}); %>
+
+
+    <!--3. Set Styles-->
+    <% _.forEach(styles, function(style) { %><link rel="stylesheet" href="<%- style %>"/><%}); %>
+
+
+    <!-- 4. Set Scripts -->
+    <% _.forEach(scripts, function(script) { %> <script src="<%- script %>"></script><%}); %>
+
+
+</head>
+<body>
+
+
+<app>
+    <div id="app-loader">
+        <div class="overlay"></div>
+
+        <span class="loading-text">Loading</span>
+
+        <span class="loading-spinner">
+                <i class="one"></i>
+                <i class="two"></i>
+                <i class="three"></i>
+            </span>
+
+
+
+    </div>
+</app>
+<script async src="<%= clientScriptBundle %>"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+@import "../../bootstrap/variables";
+
+#BaseView{
+    background: #fff;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+
+    #NavigationContent{
+        width: 200px;
+    }
+
+    #MainContent{
+        width: calc(100vw - 200px);
+        //background: linear-gradient(134deg, white 40%, $gray-lighter 98%) white;
+        background: $gray-lightest;
+
+    }
+
+    >>> header.base-header{
+        font-family: $lato;
+
+        h3 {
+            font-size: $font-size-h3;
+            font-weight: lighter;
+            padding: 20px 30px 0px 50px;
+        }
+
+
+        nav.navbar{
+            display: flex;
+            //border-bottom: 2px solid $gray-lighter;
+            margin: 0px 0 0 0px ;
+            border-radius: 0px;
+            padding-left: 50px;
+            padding-bottom:0px;
+
+            nav{
+                text-transform: uppercase;
+                font-family: $league-spartan;
+                font-size: $font-size-xs;
+                color:$gray-light;
+                margin-right: 50px;
+                cursor: pointer;
+                padding:10px 5px;
+                border-bottom: 1px solid transparent;
+                display: flex;
+
+                .nav-item-icon{
+                    margin-top: -5px;
+                }
+
+
+                &:hover, &.active {
+                    border-bottom:2px solid $brand-primary;
+                }
+
+                &.active {
+                    color:$gray;
+                }
+
+
+            }
+        }
+    }
+
+
+    >>>  section.base-section{
+        background: #fff;
+    }
+}
