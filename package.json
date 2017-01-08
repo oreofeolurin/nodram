@@ -1,5 +1,5 @@
 {
-  "name": "ream",
+  "name": "nodram",
   "version": "0.0.1",
   "description": "A Really MEAN Web Framework",
   "main": "index.js",
@@ -9,13 +9,16 @@
   "keywords": [
     "framework",
     "MEAN",
-    "really"
+    "really",
+    "starter",
+    "starters"
   ],
   "author": "Ore-Ofe Olurin",
   "license": "Apache-2.0",
   "bin": {
     "ream": "./index.js"
   },
+  "repository" : "https://github.com/oreofeolurin/ream.git",
   "dependencies": {
     "@types/uglify-js": "2.6.28",
     "autoprefixer": "6.5.3",
